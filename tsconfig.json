@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        // 프로젝트 안에서 자바스크립트 허용
+        "allowJs": true,
+        // @ts-check
+        "checkJs": true,
+        // 무조건 타입을 넣어야함
+        "noImplicitAny": true
+
+    }
+}
