@@ -31,7 +31,7 @@ function askSomeone(someone: Developer2 | Person2) {
     // 타입을 검사하지 않으면 공통 된 속성만 접근 할 수 있다.
     someone.name;
 }
-askSomeone({name: 'kbj', skill: 'wpf'});
+askSomeone({name: 'kbj', skill: 'wpf', age: 100});
 askSomeone({name: 'eggp', age: 100});
 
 // 인터섹션 타입(Intersection Type)
@@ -42,3 +42,31 @@ function askSomeone2(someone: Developer2 & Person2) {
     someone.skill;
 }
 askSomeone2({name: 'kbj', age: 100 ,skill: 'wpf'})
+
+// 이넘(Enums): 이넘은 특정 값들의 집합을 의미하는 자료형 입니다.
+// 초기화 하지 않으면 기본적인 값은 숫자.
+enum Shoes {
+    Nike = '나이키',
+    Adidas = '아디다스',
+}
+
+var myShoes = Shoes.Nike;
+
+console.log(myShoes);
+
+// 예제
+enum Answer {
+    Yes = 'Y',
+    No = 'N',
+}
+
+
+function askQuestion(answer: Answer) {
+    if(answer === Answer.Yes) {
+        console.log('정답입니다.');
+    }
+    if(answer === Answer.No) {
+        console.log('오답입니다.');
+    }
+}
+askQuestion(Answer.Yes);
